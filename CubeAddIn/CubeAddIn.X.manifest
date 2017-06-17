@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+
+  <assemblyIdentity name="CubeAddIn" version="1.0.0.0"></assemblyIdentity>
+
+  <clrClass clsid="{6be86024-98ff-49cf-8681-9c8a0120f883}" progid="CubeAddIn.StandardAddInServer" threadingModel="Both" name="CubeAddIn.StandardAddInServer" runtimeVersion=""></clrClass>
+
+  <file name="CubeAddIn.dll" hashalg="SHA1"></file>
+
+</assembly>

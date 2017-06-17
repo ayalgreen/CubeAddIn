@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3DC284CE-6572-439D-ADA3-E703FF8498B6}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>cube.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>CubeAddIn</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\..\..\..\..\AppData\Roaming\Autodesk\Inventor 2015\Addins\CubeAddIn\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="autodesk.inventor.interop, Version=19.0.0.0, Culture=neutral, PublicKeyToken=d84147f8b4276564, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_MSIL\Autodesk.Inventor.Interop\v4.0_19.0.0.0__d84147f8b4276564\autodesk.inventor.interop.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="StandardAddInServer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CubeAddIn.X.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Autodesk.CubeAddIn.Inventor.addin" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="cube.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>if exist "%25ProgramFiles%25\Microsoft SDKs\Windows\v6.0\bin\mt.exe" set var="%25ProgramFiles%25\Microsoft SDKs\Windows\v6.0\bin\mt.exe"
+if exist "%25ProgramFiles%25\Microsoft SDKs\Windows\v7.0\bin\mt.exe" set var="%25ProgramFiles%25\Microsoft SDKs\Windows\v7.0\bin\mt.exe"
+if exist "%25ProgramFiles%25\Microsoft SDKs\Windows\v6.0A\bin\mt.exe" set var="%25ProgramFiles%25\Microsoft SDKs\Windows\v6.0A\bin\mt.exe"
+if exist "%25ProgramFiles%25\Microsoft SDKs\Windows\v7.0A\bin\mt.exe" set var="%25ProgramFiles%25\Microsoft SDKs\Windows\v7.0A\bin\mt.exe"
+if exist "%25PROGRAMFILES(x86)%25\Microsoft SDKs\Windows\v6.0A\bin\mt.exe" set var=%25PROGRAMFILES(x86)%25\Microsoft SDKs\Windows\v6.0A\bin\mt.exe"
+if exist "%25PROGRAMFILES(x86)%25\Microsoft SDKs\Windows\v7.0A\bin\mt.exe" set var="%25PROGRAMFILES(x86)%25\Microsoft SDKs\Windows\v7.0A\bin\mt.exe" 
+if exist "%25PROGRAMFILES%25\Windows Kits\8.0\bin\x64\mt.exe" set var="%25PROGRAMFILES%25\Windows Kits\8.0\bin\x64\mt.exe"
+if exist "%25PROGRAMFILES%25\Windows Kits\8.0\bin\x86\mt.exe" set var="%25PROGRAMFILES%25\Windows Kits\8.0\bin\x86\mt.exe"
+if exist "%25PROGRAMFILES(x86)%25\Windows Kits\8.0\bin\x64\mt.exe" set var="%25PROGRAMFILES(x86)%25\Windows Kits\8.0\bin\x64\mt.exe"
+if exist "%25PROGRAMFILES(x86)%25\Windows Kits\8.0\bin\x86\mt.exe" set var="%25PROGRAMFILES(x86)%25\Windows Kits\8.0\bin\x86\mt.exe"
+call %25var%25 -manifest "$(ProjectDir)CubeAddIn.X.manifest" -outputresource:"$(TargetPath)";#2</PostBuildEvent>
+  </PropertyGroup>
+</Project>

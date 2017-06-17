@@ -1,0 +1,14 @@
+<Addin Type="Standard">
+  <!--Created for Autodesk Inventor Version 19.0-->
+  <ClassId>{6be86024-98ff-49cf-8681-9c8a0120f883}</ClassId>
+  <ClientId>{6be86024-98ff-49cf-8681-9c8a0120f883}</ClientId>
+  <DisplayName>CubeAddIn</DisplayName>
+  <Description>Cube Control for Inventor</Description>
+  <Assembly>CubeAddIn.dll</Assembly>
+  <LoadOnStartUp>1</LoadOnStartUp>
+  <UserUnloadable>1</UserUnloadable>
+  <Hidden>0</Hidden>
+  <SupportedSoftwareVersionGreaterThan>18..</SupportedSoftwareVersionGreaterThan>
+  <DataVersion>1</DataVersion>
+  <UserInterfaceVersion>1</UserInterfaceVersion>
+</Addin>
